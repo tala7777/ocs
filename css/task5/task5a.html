@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>file</title>
+    <style>
+      body {
+        background-color: #f0aefc;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      .float-box {
+        width: 30%;
+        background-color: #e0e0e0;
+        padding: 10px;
+        margin-right: 1.5%;
+        margin-bottom: 20px;
+        float: left;
+        box-sizing: border-box;
+      }
+
+      .float-box:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .scroll-paragraph {
+        background-color: #d1aefc;
+        padding: 10px;
+        margin-bottom: 20px;
+        overflow-y: auto;
+        max-height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Floating Articles</h2>
+
+    <div class="clearfix">
+      <div class="float-box">
+        Cats are curious creatures. They love to explore and play, often getting
+        into small spaces and climbing to high spots.
+      </div>
+      <div class="float-box">
+        Domestic cats enjoy napping in sunny spots and purring when happy. They
+        also have unique personalities and can be affectionate companions.
+      </div>
+      <div class="float-box">
+        Some cats are very vocal, meowing to communicate with their owners.
+        Others prefer silent companionship, showing love through head bumps and
+        purring.
+      </div>
+    </div>
+
+    <div class="scroll-paragraph">
+      How do I love my cats? Let me count the ways. The clean snap of
+      three-year-old Larry’s jaw as he contemplates me with detached curiosity
+      is my favourite sound in the world. I love the tenor and cadence of my
+      six-month-old kitten Kedi’s miaows as he follows me around the house.
+      (High-pitched indignant squeaks means he wants food; lower-pitched
+      chirrups suggest he would like to play.) I love the weight of Larry on my
+      feet at night and the scratchy caress of Kedi’s tongue on my eyelid in the
+      morning. But how do I know what these little tykes really think and feel?
+      I fear the authors of online listicles written in cursive fonts are
+      unlikely to provide me with the latest scientific research – and are
+      probably just saying what they think I want to hear. To truly journey into
+      the feline soul, I will have to go to the fountainhead.
+    </div>
+
+    <div class="clearfix">
+      <div class="float-box">
+        Cats are natural hunters. They enjoy stalking and chasing toys, which
+        helps them stay active and mentally stimulated.
+      </div>
+      <div class="float-box">
+        Grooming is an important habit. Cats spend hours cleaning themselves to
+        maintain a sleek coat and stay healthy.
+      </div>
+      <div class="float-box">
+        Playtime strengthens the bond with humans. Interactive toys and games
+        keep cats engaged and happy.
+      </div>
+    </div>
+  </body>
 </html>

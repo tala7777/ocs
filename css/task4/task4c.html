@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      body {
+        background-color: #ffffff;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .signup-box {
+        background-color: #3dccf0;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 600px;
+        text-align: center;
+        flex-direction: column;
+        display: flex;
+      }
+
+      .signup-box h2 {
+        color: rgb(255, 255, 255);
+        margin-bottom: 20px;
+      }
+      .signup-box input[type="text"],
+      .signup-box input[type="email"],
+      .signup-box input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        margin: 6px 0;
+        border: 0px none;
+        border-radius: 7px;
+      }
+      .signup-box button {
+        align-self: flex-start;
+        background-color: #0084ff;
+        color: rgb(255, 255, 255);
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        width: 20%;
+        cursor: pointer;
+      }
+      .signup-box button:hover {
+        background-color: #006fd1;
+      }
+      .button-wrapper {
+        display: flex;
+        justify-content: flex-start;
+      }
+      .signup-box textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 6px 0;
+        border: none;
+        border-radius: 7px;
+        font-size: 16px;
+        resize: vertical; 
+        min-height: 100px; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="signup-box">
+      <h2>Contact us</h2>
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" required placeholder="Email" required />
+        <input
+          type="number"
+          required
+          placeholder="tel: XXX XXX XXXX"
+          required
+        />
+        <textarea placeholder="Your Message Here..." required></textarea>
+        <div class="button-wrapper"><button type="submit">Send</button></div>
+      </form>
+    </div>
+  </body>
 </html>

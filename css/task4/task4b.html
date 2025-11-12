@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      body {
+        background-color: #99daff;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .signup-box {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+      }
+
+      .signup-box h2,
+      h6 {
+        color: rgb(52, 30, 110);
+        margin-bottom: 20px;
+      }
+      .signup-box label {
+        text-align:left;
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: rgb(52, 30, 110);
+      }
+
+      .signup-box input[type="text"],
+      .signup-box input[type="email"],
+      .signup-box input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin: 6px 0;
+        border: 1px solid #99daff;
+        border-radius: 7px;
+      }
+      .signup-box button {
+        background-color: #00aeff;
+        color: rgb(255, 255, 255);
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        width: 40%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="signup-box">
+      <h2>CODEWITHRANDOM</h2>
+      <h6>Thank you for Being with me</h6>
+      <form>
+        <label for="text">Name</label>
+        <input type="text" required />
+        <label for="email">E-mail</label>
+        <input type="email" required />
+        <label for="password">Password</label>
+        <input type="password" required />
+        <label for="password">Repeat password</label>
+        <input type="password"required />
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </body>
 </html>

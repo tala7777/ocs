@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>file</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);    
+      border: 5px solid #463009;            
+      gap: 2px;                             
+    }
+
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; 
+      padding-top: 20px;
+      font-size: 2rem;
+      color: white;
+    }
+
+    .empty {
+      background-color: transparent;
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="box" style="background-color: #1c9636">1</div>
+  <div class="box" style="background-color: #effa55">2</div>
+  <div class="box" style="background-color: #9461bd">3</div>
+  <div class="box" style="background-color: #8a8a8a">4</div>
+  <div class="box" style="background-color: #476694">5</div>
+  <div class="box" style="background-color: #be9054">6</div>
+  <div class="box" style="background-color: #ff81b1">7</div>
+  <div class="box" style="background-color: #c53421">8</div>
+  <div class="box" style="background-color: #7c0505">9</div>
+  <div class="box" style="background-color: #009999">10</div>
+  <div class="box empty"></div>
+  <div class="box empty"></div>
 </body>
 </html>
