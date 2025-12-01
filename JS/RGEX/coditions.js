@@ -1,16 +1,18 @@
 function checkName(element, errorId) {
-    let value = element.value.trim();
+    const value = element.value.trim();
     const pattern = /^[A-Za-z\u0600-\u06FF'-]+(?:\s[A-Za-z\u0600-\u06FF'-]+)*$/;
     const isValid = pattern.test(value);
-
     const errorElem = document.getElementById(errorId);
+
     if (!isValid) {
         errorElem.innerText = "Please use letters only";
+        element.classList.add("invalid");
     } else {
         errorElem.innerText = "";
+        element.classList.remove("invalid");
     }
-    console.log("Value:", value, "Valid?", isValid);
 }
+
 function checkBirthdate() {
     const birthdateInput = document.getElementById("birthdate");
     const birthdateValue = birthdateInput.value;
@@ -21,83 +23,84 @@ function checkBirthdate() {
         birthdateInput.classList.add("invalid");
         return false;
     }
+
     const today = new Date();
     const birthDate = new Date(birthdateValue);
+    const age = today.getFullYear() - birthDate.getFullYear();
 
-    let age = today.getFullYear() - birthDate.getFullYear();
     if (age < 13) {
         errorElem.innerText = "You must be at least 13 years old";
+        birthdateInput.classList.add("invalid");
         return false;
     }
 
-
-
     errorElem.innerText = "";
+    birthdateInput.classList.remove("invalid");
     return true;
 }
+
 function checkEmail() {
-    let emailValue = email.value;
+    const input = document.getElementById("email");
+    const emailValue = input.value;
     const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const isValid = pattern.test(emailValue);
     const emailError = document.getElementById("email-error");
+    const isValid = pattern.test(emailValue);
+
     if (!isValid) {
         emailError.innerText = "Please enter your email correctly";
+        input.classList.add("invalid");
     } else {
         emailError.innerText = "";
+        input.classList.remove("invalid");
     }
 }
+
 function emailConf() {
+    const email = document.getElementById("email").value;
+    const confEmail = document.getElementById("confirm-email").value;
+    const errorElem = document.getElementById("emailconf-error");
 
-    let email = document.getElementById("email").value;
-    let confEmail = document.getElementById("confirm-email").value;
-    if (email == confEmail) {
-        document.getElementById("emailconf-error").innerText = "";
-
-    }
-    else {
-        document.getElementById("emailconf-error").innerText = "The email and the confirmation email are not the same";
+    if (email === confEmail) {
+        errorElem.innerText = "";
+    } else {
+        errorElem.innerText = "The email and the confirmation email are not the same";
     }
 }
+
 function checkPass() {
-    const passValue = password.value.trim();
+    const input = document.getElementById("password");
+    const value = input.value;
     const passError = document.getElementById("pass-error");
 
-    // Password rules:
-    // - Starts with capital letter
-    // - At least 2 numbers
-    // - At least 1 special char
-    // - Length 8–32
     const pattern = /^(?=.*\d.*\d)(?=.*[@$!%*?&])[A-Z][A-Za-z\d@$!%*?&]{7,31}$/;
-
-    const isValid = pattern.test(passValue);
+    const isValid = pattern.test(value);
 
     if (!isValid) {
         passError.innerText =
             "Password must:\n• Start with a capital letter\n• Contain at least 2 numbers\n• Include at least 1 symbol (@ $ ! % * ? &)\n• Be 8–32 characters long";
-        password.classList.add("invalid");
+        input.classList.add("invalid");
     } else {
         passError.innerText = "";
-        password.classList.remove("invalid");
+        input.classList.remove("invalid");
     }
 }
+
 function passConf() {
+    const pass = document.getElementById("password").value;
+    const conf = document.getElementById("confirm-password").value;
+    const errorElem = document.getElementById("passconf-error");
 
-    let password = document.getElementById("password").value;
-    let confPass = document.getElementById("confirm-password").value;
-    if (password == confPass) {
-        document.getElementById("passconf-error").innerText = "";
-
-    }
-    else {
-        document.getElementById("passconf-error").innerText = "The password and the confirmation password are not the same";
+    if (pass === conf) {
+        errorElem.innerText = "";
+    } else {
+        errorElem.innerText = "The password and the confirmation password are not the same";
     }
 }
+
 function checkPhone() {
     const phoneInput = document.getElementById("phone");
     const phoneValue = phoneInput.value.trim();
     const phoneError = document.getElementById("phone-error");
-
-    // Pattern: only numbers AND exactly 10 digits
     const pattern = /^\d{10}$/;
 
     if (!pattern.test(phoneValue)) {

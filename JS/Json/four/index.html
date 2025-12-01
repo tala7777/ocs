@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <label for="name">
+      Name :
+      <input
+        id="name"
+        type="text"
+        oninput="checkName(this, 'name-error')"
+        autocomplete="name"
+        required
+      />
+      <small id="name-error"></small>
+    </label>
+    <label for="email">
+      Email:
+      <input
+        id="email"
+        type="email"
+        oninput="checkEmail()"
+        autocomplete="email"
+        required
+      />
+      <small id="email-error"></small>
+    </label>
+    <label for="phone">
+      Phone:
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        autocomplete="phone"
+        oninput="checkPhone()"
+      />
+      <small id="phone-error"></small>
+    </label>
+    <button type="submit" id="submit" name="submit" onclick="submitObj()">
+      Click on me to submit
+    </button>
+
+    <hr />
+    <div>
+      <output type="output" id="resultColored" name="result"></output>
+    </div>
+
+    <hr />
+
+    <div>
+      <output type="output" id="resultTable" name="result" ></output>
+      
+    </div>
+  </body>
+</html>

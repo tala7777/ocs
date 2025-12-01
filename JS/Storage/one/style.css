@@ -1,0 +1,146 @@
+/* GENERAL PAGE LAYOUT */
+body {
+  background: linear-gradient(135deg, #c9c3ff, #d8d2ff);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* CONTAINER HOLDS ALL FORMS – centered perfectly */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* SIGN-UP BOX */
+.signup-box {
+  background: #8e85ff;
+  padding: 35px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+
+  /* Ensures nothing overflows / shifts */
+  box-sizing: border-box;
+}
+
+/* TITLE */
+.signup-box h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* LABELS */
+.signup-box label {
+  color: #f1f1ff;
+  font-size: 13px;
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top: 12px;
+
+  /* alignment fix */
+  width: 100%;
+}
+
+/* INPUTS */
+.signup-box input[type="date"],
+.signup-box input[type="text"],
+.signup-box input[type="number"],
+.signup-box input[type="email"],
+.signup-box input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: #f4f2ff;
+  font-size: 14px;
+  margin-top: 3px;
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out;
+}
+
+/* INPUT FOCUS EFFECT */
+.signup-box input:focus {
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(80, 70, 255, 0.3);
+}
+
+/* NAME FIELDS – SIDE BY SIDE AND ALIGNED */
+.name-fields {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* FIELD GROUP ALIGNS ERRORS + LABEL + INPUT */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ERROR MESSAGE */
+.field-group small {
+  color: #ffdddd;
+  font-size: 11px;
+  margin-top: 4px;
+  text-align: left;
+}
+
+/* BUTTON */
+.signup-box button {
+  background-color: #5d59c9;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 22px;
+  width: 85%;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.25s ease-in-out;
+
+  align-self: center; /* alignment fix */
+}
+
+.signup-box button:hover {
+  background-color: #4e4ab0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(30, 20, 120, 0.3);
+}
+
+/* TEXT + LINKS */
+.signup-box p,
+.signup-box small {
+  color: #f8f8ff;
+  font-size: 13px;
+}
+
+.signup-box a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: 0.2s;
+}
+
+.signup-box a:hover {
+  color: #eee;
+}

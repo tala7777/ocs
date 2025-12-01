@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="main.js" defer></script>
+    <title>Password Form</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td><label for="password">Password (min 6 characters):</label></td>
+        <td>
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            oninput="checkPass(this, 'pass-error')"
+            autocomplete="new-password"
+            required
+          />
+          <br />
+          <small id="pass-error"></small>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="confirm-password">Repeat Password:</label></td>
+        <td>
+          <input
+            id="confirm-password"
+            type="password"
+            placeholder="Confirm Password"
+            oninput="passConf(this, 'passconf-error')"
+            required
+          />
+          <br />
+          <small id="passconf-error"></small>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

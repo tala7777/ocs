@@ -1,0 +1,72 @@
+/* Center the entire page */
+body {
+  font-family: Arial, sans-serif;
+  background: #e7f6ea; /* soft green background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* full screen height */
+  margin: 0;
+  padding: 20px;
+  gap: 30px; /* space between register & login sections */
+}
+
+/* Title above each form */
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3d8b40;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Centered form container */
+form {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* even spacing between inputs */
+  border-left: 6px solid #4caf50; /* green accent */
+}
+
+/* Clean input fields */
+input,
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #c7dec9;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out;
+}
+
+/* Focus effect */
+input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+  outline: none;
+}
+
+/* Button styling */
+button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+button:hover {
+  background: #45a247;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}

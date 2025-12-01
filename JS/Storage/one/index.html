@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <title>User Profile</title>
+  </head>
+  <body> <div class="container">
+    <div class="signup-box">
+      <h2>User Profile</h2>
+
+      <form>
+        <div class="field-group">
+          <input
+            id="user-name"
+            type="text"
+            placeholder="Your Name"
+            required
+          />
+          <small id="name-error"></small>
+        </div>
+
+        <div class="field-group">
+          <input
+            id="user-age"
+            type="number"
+            placeholder="Your Age"
+            min="1"
+            required
+          />
+          <small id="age-error"></small>
+        </div>
+
+        <div class="field-group">
+          <p>Gender:</p>
+          <div class="radio-group">
+            <label>
+              <input  type="radio" name="gender" value="male" required /> Male
+            </label>
+            <label>
+              <input type="radio" name="gender" value="female" /> Female
+            </label>
+            
+          </div>
+          <small id="gender-error"></small>
+        </div>
+
+        <div class="field-group">
+          <textarea
+            id="description"
+            placeholder="Brief Description"
+            rows="4"
+            required
+          ></textarea>
+          <small id="desc-error"></small>
+        </div>
+
+        <div class="field-group">
+          <input
+            id="major-uni"
+            type="text"
+            placeholder="Your Major and University"
+            required
+          />
+          <small id="major-uni-error"></small>
+        </div>
+
+        <div class="field-group">
+          <label>Preferred Programming Languages (Select all that apply):</label>
+          <div class="checklist-group">
+            <label>
+              <input type="checkbox" name="prog_lang" value="python" /> Python
+            </label>
+            <label>
+              <input type="checkbox" name="prog_lang" value="javascript" /> JavaScript
+            </label>
+            <label>
+              <input type="checkbox" name="prog_lang" value="java" /> Java
+            </label>
+            <label>
+              <input type="checkbox" name="prog_lang" value="csharp" /> C#
+            </label>
+            <label>
+              <input type="checkbox" name="prog_lang" value="cplusplus" /> C++
+            </label>
+            <label>
+              <input type="checkbox" name="prog_lang" value="other" /> Other
+            </label>
+          </div>
+          <small id="lang-error"></small>
+        </div>
+
+        <label class="checkbox-label">
+          <input id="checklist-agree" type="checkbox" required /> I agree to share this information.
+        </label>
+
+        <button class="submit-btn" type="button">Submit</button>
+
+        <p>Already have an account? <a href="#">Login here</a></p>
+        <small>Copyright © YourCompany.com</small>
+      </form>
+    </div>
+    <div>
+        <h1>users info</h1>
+    <table class="users-info">
+        </div>
+</div>
+    </table>
+  </body>
+</html>
